@@ -1,22 +1,38 @@
-import sys
-
-from PySide6.QtWidgets import QMainWindow, QApplication, QVBoxLayout, QWidget, QLabel
+from buttons import *
+from display import *
+from info import *
+from main_window import *
+from styles import *
+from variables import *
+from PySide6.QtWidgets import QApplication, QLabel
 
 if __name__ == "__main__":
     
     app = QApplication(sys.argv)
+    setupTheme()
+    window = MainWindow()
 
-    window = QMainWindow()
-    central_widget = QWidget()
-    v_layout = QVBoxLayout()
+    # icon
+    icon = QIcon(str(WINDOW_ICON_PATH))
+    window.setWindowIcon(icon)
+    app.setWindowIcon(icon)
 
-    central_widget.setLayout(v_layout)
-    
-    label_1 = QLabel("Meu texto")
+    # info
 
-    v_layout.addWidget(label_1)
+    info = Info("Sua conta")
+    window.addWidgetToVLayout(info)
 
-    window.setCentralWidget(central_widget)
+    # display
+    display = Display()
+    window.addWidgetToVLayout(display)
+
+    # grid
+    buttonsGrid = ButtonsGrid(display,info)
+    window.vLayout.addLayout(buttonsGrid)
+
+    # last thing to do
+    window.adjustFixedSize()
     window.show()
-
     app.exec()
+
+
