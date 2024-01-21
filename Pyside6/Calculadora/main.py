@@ -1,10 +1,12 @@
-from buttons import *
-from display import *
-from info import *
-from main_window import *
-from styles import *
-from variables import *
+from buttons import ButtonsGrid
+from display import Display
+from info import Info
+from main_window import MainWindow, QIcon
+from styles import setupTheme
+from variables import WINDOW_ICON_PATH
+
 from PySide6.QtWidgets import QApplication, QLabel
+import sys
 
 if __name__ == "__main__":
     
