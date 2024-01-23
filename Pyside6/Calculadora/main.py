@@ -20,7 +20,6 @@ if __name__ == "__main__":
     app.setWindowIcon(icon)
 
     # info
-
     info = Info("Sua conta")
     window.addWidgetToVLayout(info)
 
@@ -36,5 +35,3 @@ if __name__ == "__main__":
     window.adjustFixedSize()
     window.show()
     app.exec()
-
-
