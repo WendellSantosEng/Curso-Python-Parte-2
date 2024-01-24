@@ -13,7 +13,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     setupTheme()
     window = MainWindow()
-
+# C:\Workspace\Curso Python Udemy Parte 2\Pyside6\Calculadora\main.py
     # icon
     icon = QIcon(str(WINDOW_ICON_PATH))
     window.setWindowIcon(icon)
