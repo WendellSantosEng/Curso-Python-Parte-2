@@ -1,0 +1,5 @@
+Salvando o arquivo .ui, basta abrir o terminal e digitar o seguinte comando:
+
+pyside6-uic "pasta_onde_esta_o_ui/arquivo.ui" -o "pasta_destino/arquivo.py"
+
+É nescessario recompilar toda vez que mudar algo no QT Designer, atravez desse comando
