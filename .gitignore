@@ -1,9 +1,10 @@
 __localcode
 .DS_Store
 chromedriver
-mysql_206
+mysql_container
 .env
 aula207_ola_django/static_files
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
