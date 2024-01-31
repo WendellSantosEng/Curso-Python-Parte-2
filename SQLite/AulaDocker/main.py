@@ -79,8 +79,36 @@ with connection:
             ("Siri", 22, ),
             ("Helena", 15, ),
         )
-        result = cursor.executemany(sql, data4)  # type: ignore
-        print(sql)
-        print(data4)
-        print(result)
+        result = cursor.executemany(sql, data4)
     connection.commit()
+
+    with connection.cursor() as cursor:
+        # menor_id = input("Digite o menor id: ")
+        # maior_id = input("Digite o maior id: ")
+        menor_id = 2
+        maior_id = 4
+        sql = (
+            f'SELECT * FROM {TABLE_NAME} '
+            # 'WHERE id >= %s AND id <= %s ' a mesma coisa do de baixo
+            'WHERE id BETWEEN %s AND %s '
+        )
+        cursor.execute(sql, (menor_id, maior_id))
+        # print(cursor.mogrify(sql, (menor_id, maior_id)))
+
+        data5 = cursor.fetchall()
+        for row in data5:
+            print(row)
+    
+    with connection.cursor() as cursor:
+        sql = (
+            f'DELETE FROM {TABLE_NAME} '
+            'WHERE id = %s'
+        )
+        cursor.execute(sql,(1,))
+        connection.commit()
+
+        cursor.execute(f'SELECT * FROM {TABLE_NAME} ')
+
+        data5 = cursor.fetchall()
+        for row in data5:
+            print(row)
