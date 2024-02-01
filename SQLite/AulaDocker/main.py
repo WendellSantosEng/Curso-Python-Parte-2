@@ -1,4 +1,5 @@
 import pymysql
+import pymysql.cursors
 import dotenv
 import os
 
@@ -11,7 +12,8 @@ connection = pymysql.connect(
     user = os.environ["MYSQL_USER"],
     password = os.environ["MYSQL_PASSWORD"],
     database = os.environ["MYSQL_DATABASE"],
-    charset= "utf8mb4"
+    charset= "utf8mb4",
+    cursorclass= pymysql.cursors.DictCursor,
 )
 
 with connection:
@@ -109,6 +111,43 @@ with connection:
 
         cursor.execute(f'SELECT * FROM {TABLE_NAME} ')
 
+    with connection.cursor() as cursor:
+        sql = (
+            f'UPDATE {TABLE_NAME} '
+            'SET nome= %s, idade=%s '
+            'WHERE id = %s'
+        )
+        cursor.execute(sql,("Eleonor",102, 4))
+        connection.commit()
+
+        cursor.execute(f'SELECT * FROM {TABLE_NAME} ')
+
+        # data5 = cursor.fetchall()
+        # for row in data5:
+        #     print(row)
+
         data5 = cursor.fetchall()
         for row in data5:
             print(row)
+            # print(row["nome"])
+
+
+    # ITENS INTERESSANTES: PARA DADOS ROBUSTOS, MUITO GRANDES
+            
+        # cursor.scroll(-2) Volta duas linha apos o inter se esgotar
+        # cursor.scroll(5, "absolute") a partir da linha 5
+        
+        # SSCursor -> fetchall.unbuffered = generator
+            # if row["id"] >= 5:
+                # break
+            
+        # scroll nao é muito usado , pois nao funciona corretamente
+        # len(data5) quant linhas afetadas
+        
+        # cursor.execute(
+        #     f'SELECT id FROM {TABLE_NAME} ORDER BY id DESC LIMIT 1 '
+        # )
+        # lastid = cursor.fetchone()
+        # print(lastid) ultima row mudada
+
+        # cursor.rownumber() qual row o cursor esta
