@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tabela{
+    margin: 30px;
+}
+
+.title{
+    margin: 10px;
+    background-color: rgba(90, 0, 0, 0.8);
+    padding: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+table{
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-color: blue;
+}
+
+table td, table th{
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #0a0a49;
+    color: white;
+}
