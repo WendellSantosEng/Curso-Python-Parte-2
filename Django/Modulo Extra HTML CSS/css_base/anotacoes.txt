@@ -123,3 +123,48 @@
     específica do seu HTML e das necessidades de design do seu projeto.
 
     Experimente e adapte conforme necessário para atender aos seus requisitos específicos.
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+    Em CSS, pseudo-elements são usados para selecionar e estilizar partes específicas de um elemento. Eles são representados por dois pontos (::) e são adicionados ao seletor para escolher uma parte específica do elemento. Aqui está uma lista de alguns pseudo-elementos comuns em CSS:
+
+        ::before: Adiciona conteúdo antes do conteúdo real do elemento.
+
+            .element::before {
+                content: "Antes ";
+            }
+
+        ::after: Adiciona conteúdo após o conteúdo real do elemento.
+
+            .element::after {
+                content: " Depois";
+            }
+
+        ::first-line: Seleciona a primeira linha de um bloco.
+
+            .element::first-line {
+                color: red;
+            }
+
+        ::first-letter: Seleciona a primeira letra de um bloco de texto.
+
+            .element::first-letter {
+                font-size: 2em;
+            }
+
+        ::selection: Aplica estilos à parte do texto que está sendo selecionada pelo usuário.
+
+            ::selection {
+                background-color: yellow;
+                color: black;
+            }
+
+        ::placeholder: Estiliza o texto do espaço reservado em campos de formulário.
+
+            input::placeholder {
+                color: gray;
+            }
+
+        ::before e ::after são comumente usados para criar pseudo-elementos efeitos decorativos.

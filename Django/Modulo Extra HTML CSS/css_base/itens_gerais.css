@@ -49,4 +49,19 @@
         background-color: aquamarine;
     }
     
-    
+/* MEDIA QUERIES E BREAKPOINTS
+
+/* usado para quando a tela for pequena para acomodar um grid, por exemplo */
+/* dai quando é abaixo de x px, ou entre xy, a tela fica de certa forma */
+
+@media (max-width:320){
+    .grid .col{
+        width: 100%
+    }
+}
+
+@media (min-width:321) and (max-width:768){
+    .grid .col{
+        width: 50%
+    }
+}
