@@ -168,3 +168,36 @@
             }
 
         ::before e ::after são comumente usados para criar pseudo-elementos efeitos decorativos.
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Propriedades CSS para Flexbox:
+
+    display: Define um contêiner como um flexível.
+    flex-direction: Define a direção principal do flexível.
+    flex-wrap: Especifica se os itens devem envolver-se em várias linhas ou não.
+    flex-flow: Uma abreviação de flex-direction e flex-wrap.
+    justify-content: Alinha os itens ao longo do eixo principal.
+    align-items: Alinha os itens ao longo do eixo secundário.
+    align-content: Alinha o contêiner de flexíveis quando os itens não ocupam todo o espaço disponível.
+    flex: Define a capacidade de estiramento de um item.
+    order: Define a ordem dos itens flexíveis.
+
+Propriedades CSS para Grid:
+
+    display: Define um contêiner como uma grade.
+    grid-template-columns: Especifica o tamanho das colunas da grade.
+    grid-template-rows: Especifica o tamanho das linhas da grade.
+    grid-template-areas: Define o layout da grade usando nomes de área.
+    grid-template: Uma abreviação de grid-template-rows, grid-template-columns, e grid-template-areas.
+    grid-column-gap: Define o espaçamento entre as colunas da grade.
+    grid-row-gap: Define o espaçamento entre as linhas da grade.
+    grid-gap: Uma abreviação de grid-row-gap e grid-column-gap.
+    justify-items: Alinha os itens dentro de um espaço de grade ao longo do eixo de linha.
+    align-items: Alinha os itens dentro de um espaço de grade ao longo do eixo do bloco.
+    justify-self: Alinha um item dentro de uma célula da grade ao longo do eixo de linha.
+    align-self: Alinha um item dentro de uma célula da grade ao longo do eixo do bloco.
+    grid-auto-rows: Especifica o tamanho das linhas automáticas na grade.
+    grid-auto-columns: Especifica o tamanho das colunas automáticas na grade.
+    grid-auto-flow: Controla como os itens são automaticamente colocados na grade.
