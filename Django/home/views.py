@@ -1,8 +1,10 @@
 from django.shortcuts import render
-
 def home(request):
     print('home')
     return render(
         request,
-        "home.html",
+        "home/index.html",
+        {
+            "text" : "Estamos na home",
+        }
     )
