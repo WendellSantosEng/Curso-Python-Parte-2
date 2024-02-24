@@ -18,13 +18,57 @@ body {
 }
 
 .content{
-  background: #fff;
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.post{
+  background: #0e054180;
   padding: 1.5rem;
   box-shadow: 5px 2px 5px rgba(0, 0, 0, 10%);
 }
 
 @media (min-width: 600px){
-  .content{
+  .content:not(:has(.single-post)){
     grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
   }
+}
+
+.menu{
+  background-color: black;
+  padding: 1.5rem;
+}
+
+.menu__links{
+  display: flex;
+  list-style-type: none;
+}
+
+.menu__links a{
+  padding: 1.5rem;
+  color: white !important;
+}
+
+.single-post{
+  display: grid;
+  width: 500px;
+  height: 500px;
+  font-size: 30px;
+  align-items: center;
+}
+
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: darkblue;
+  text-decoration: none;
 }

@@ -3,7 +3,7 @@ __localcode
 chromedriver
 mysql_container
 .env
-aula207_ola_django/static_files
+aula207_ola_django/staticfiles
 
 
 # Byte-compiled / optimized / DLL files
