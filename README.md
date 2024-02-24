@@ -4,7 +4,7 @@
     Além disso terá anotações e projetos teste com recursos avançados da linguagem como Design Patterns e TDD.</h2>
 
 <p>
-  <h3></h3>[Curso Python Zero ao Avançado + Banco de Dados + Django](https://www.udemy.com/course/python-3-do-zero-ao-avancado)
+  <h3>[Curso Python Zero ao Avançado + Banco de Dados + Django](https://www.udemy.com/course/python-3-do-zero-ao-avancado)</h3>
   
   Curso da plataforma Udemy
 
